@@ -1,6 +1,6 @@
 # When AI reviewers misclassify evidence
 
-A small, controlled pilot of an AI reviewer's judgment, run on October 8, 2026. It asks two questions at once: does the reviewer approve claims the evidence doesn't support, and does it reject sound claims? Both failures matter in practice. The first lets fabrication through; the second deletes real work.
+A 60-request controlled pilot of an AI reviewer's judgment, run on October 8, 2026. It asks two questions at once: does the reviewer approve claims the evidence doesn't support, and does it reject sound claims? Both failures matter in practice. The first lets fabrication through; the second deletes real work.
 
 **Ryan Zimmerman** · Founder and Principal Data Scientist, SparkData Analytics · [Two-page research note (PDF)](paper/Ryan_Zimmerman_AI_Reviewer_Research_Note.pdf)
 
@@ -63,9 +63,9 @@ Start `run_config.json` from [run_config.example.json](run_config.example.json).
 | `paper/` | The two-page research note |
 | `tests/` | Tests for request binding, response validation, budget handling and the recorded results |
 
-## Scope
+## Data & Reproducibility
 
-This is a small constructed test set with one reviewer model. It shows how that reviewer behaved on these cases. It does not establish general accuracy, resistance to prompt injection, or performance on real records. No client or confidential material was used. The 60 raw responses from the October 8 run are retained privately; the execution hash in the results file identifies them.
+All 28 cases are synthetic test scenarios constructed from real production failure classes; no client or confidential material was used. The 60 raw provider responses from the October 8, 2026 run are retained privately and bound to the `execution_sha256` digest in `results/jev_synthetic_pilot_2026-10-08.json`, while `verify_recorded_results.py` deterministically rebuilds the corpus and 60-request plan hashes offline.
 
 ## Next experiment
 
