@@ -1,0 +1,16 @@
+{
+  "schema": "sda-jev-run-config-1",
+  "enabled": true,
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "model": "jev-1.13.0",
+  "allowed_data_classes": ["synthetic"],
+  "authorization_reference": "your-own-approval-note",
+  "account_reference": "your-typesafe-account",
+  "auto_recharge": false,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "max_cost_usd": "0.20",
+  "max_requests": 60,
+  "price_per_million_input_usd": "0.042",
+  "run_id": "pilot-rerun-1",
+  "runtime_directory": "REPLACE with the absolute path of --runtime"
+}

@@ -1,0 +1,4 @@
+# The plan hash covers the exact bytes of sda_semantic_review.py, so text files keep LF endings on every platform.
+* text=auto eol=lf
+*.pdf binary
+*.png binary

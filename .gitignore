@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+plan.json
+execution.json
+report.json
+run_config.json
+run/

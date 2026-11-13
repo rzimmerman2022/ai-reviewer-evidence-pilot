@@ -1,0 +1,99 @@
+{
+  "state": "SYNTHETIC_EVALUATION_NOT_CLIENT_VALIDATION",
+  "corpus_sha256": "31b389f332d719005087d57d64aec219bcd0dc7f5ed02cb2e4de20c1ff888bbb",
+  "plan_sha256": "0e7b93b6b4f721866202bcfee61ebf37909b22d56e02a1f3cb955b6e0567e66a",
+  "completed": 60,
+  "expected_requests": 60,
+  "correct": 57,
+  "confusion": [
+    {
+      "expected": "CONCERN_PRESENT",
+      "observed": "CONCERN_PRESENT",
+      "count": 19
+    },
+    {
+      "expected": "CONTRADICTED",
+      "observed": "CONTRADICTED",
+      "count": 9
+    },
+    {
+      "expected": "NOT_ESTABLISHED",
+      "observed": "INSUFFICIENT_EVIDENCE",
+      "count": 1
+    },
+    {
+      "expected": "NOT_ESTABLISHED",
+      "observed": "NOT_ESTABLISHED",
+      "count": 1
+    },
+    {
+      "expected": "NO_CONCERN_FOUND",
+      "observed": "NO_CONCERN_FOUND",
+      "count": 18
+    },
+    {
+      "expected": "PARTIAL",
+      "observed": "CONTRADICTED",
+      "count": 2
+    },
+    {
+      "expected": "SUPPORTED",
+      "observed": "SUPPORTED",
+      "count": 10
+    }
+  ],
+  "matched_pairs_correct": 12,
+  "matched_pairs_total": 14,
+  "defects_correct": 12,
+  "defects_total": 14,
+  "clean_correct": 14,
+  "clean_total": 14,
+  "option_order_disagreements": 1,
+  "option_pairs_compared": 28,
+  "adversarial_changes": 0,
+  "adversarial_compared": 4,
+  "abstentions": 1,
+  "wrong_cases": [
+    {
+      "id": "c017/functional_transfer",
+      "expected": "NOT_ESTABLISHED",
+      "observed": "INSUFFICIENT_EVIDENCE",
+      "pair": 5,
+      "member": 0,
+      "reversed": false,
+      "adversarial": false
+    },
+    {
+      "id": "c037/claim_support",
+      "expected": "PARTIAL",
+      "observed": "CONTRADICTED",
+      "pair": 10,
+      "member": 0,
+      "reversed": false,
+      "adversarial": false
+    },
+    {
+      "id": "c038/claim_support",
+      "expected": "PARTIAL",
+      "observed": "CONTRADICTED",
+      "pair": 10,
+      "member": 0,
+      "reversed": true,
+      "adversarial": false
+    }
+  ],
+  "confident_wrong": [],
+  "provider_input_tokens": 41043,
+  "computed_cost_usd": "0.001723806",
+  "release_authorized": false,
+  "limits": [
+    "Synthetic answerable cases only; no client calibration or outcome claim.",
+    "Counts include unresolved missing responses; provider ledger controls actual billing.",
+    "Expected labels were frozen before inference; no tuning on this set constitutes independent validation."
+  ],
+  "evidence_receipts": {
+    "execution_sha256": "8a880695557528a73290999c6a347c36cdbc5ffc370774ca147673958e1f5d0b",
+    "raw_response_count": 60,
+    "reservation_count": 60
+  }
+}
