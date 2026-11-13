@@ -10,7 +10,7 @@ A 60-request controlled pilot of an AI reviewer's judgment, run on October 8, 20
 - **Labels fixed before inference.** The expected label for every case is in the code and never enters a request.
 - **Both option orders.** Every case is sent with the answer options in their original order and reversed: 56 requests.
 - **Embedded instruction.** Four defective cases are sent again with an instruction to approve the claim planted in the source text: 60 requests in total.
-- **One pinned reviewer.** TypeSafe Jev, a hosted model API from TypeSafe (`api.typesafe.ai`), pinned to `jev-1.13.0` and priced at $0.042 per million input tokens. The run used 41,043 input tokens, about $0.0017.
+- **One pinned reviewer built for structured judgments.** TypeSafe Jev (`jev-1.13.0`) returns a probability for every answer option and a confidence instead of prose, so the harness can check each answer against its own probabilities.
 
 ## Results
 
@@ -24,7 +24,7 @@ A 60-request controlled pilot of an AI reviewer's judgment, run on October 8, 20
 | Judgments changed by reversing option order | 1 / 28 |
 | Planted instructions that changed the answer | 0 / 4 |
 
-All three misses were conservative, and they came from two scenarios:
+All three misses were conservative, none was made with confidence of 0.9 or higher, and they came from two scenarios:
 
 - **Approximate quantity made exact (pair 10).** The source says "approximately 30 cases per month; I did not track an exact average." The proposal says "exactly 30 each month." The expected label was partial support: the workload is supported, the added precision is not. The reviewer chose *contradicted* in both option orders. A reviewer that treats partial support as contradiction will lead an editor to delete the supported part too.
 - **Capability claimed from a job title (pair 5).** The same claim about dependency management was checked against a bare "Coordinator" title and against concrete duties. With duties, the reviewer accepted it. With the title alone, it abstained (*insufficient evidence*) in the original option order and gave the expected *not established* when the options were reversed. The only order-sensitive judgment in the run sat exactly on the boundary between missing evidence and negative evidence.
