@@ -63,9 +63,9 @@ Start `run_config.json` from [run_config.example.json](run_config.example.json).
 | `paper/` | The two-page research note |
 | `tests/` | Tests for request binding, response validation, budget handling and the recorded results |
 
-## Data & Reproducibility
+## Data
 
-All 28 cases are synthetic test scenarios constructed from real production failure classes; no client or confidential material was used. The 60 raw provider responses from the October 8, 2026 run are retained privately and bound to the `execution_sha256` digest in `results/jev_synthetic_pilot_2026-10-08.json`, while `verify_recorded_results.py` deterministically rebuilds the corpus and 60-request plan hashes offline.
+All 28 cases are fictional; no client or confidential material was used. The 60 raw responses from the October 8 run are kept privately and identified by the execution hash in `results/jev_synthetic_pilot_2026-10-08.json`.
 
 ## Next experiment
 
