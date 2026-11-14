@@ -86,7 +86,7 @@ The [follow-on experiment](#next-experiment) addresses the first two: held-out m
 | `verify_recorded_results.py` | Offline check of the recorded results against the design |
 | `results/jev_synthetic_pilot_2026-10-08.json` | Scored results from the October 8 run |
 | `CASES.md` | All 28 cases in a readable table |
-| `paper/` | The two-page research note |
+| `paper/` | The two-page research note (CC BY 4.0) |
 | `tests/` | Tests for request binding, response validation, budget handling and the recorded results |
 
 ## Data
@@ -103,4 +103,5 @@ I designed the experiment and its 14 paired scenarios, fixed the expected labels
 
 ## License
 
-Code under the [MIT License](LICENSE). The research note in `paper/` is © 2026 Ryan Zimmerman.
+- **Code, cases, results and scripts:** [MIT License](LICENSE), © 2026 SparkData Analytics, LLC.
+- **Research note in `paper/`:** [CC BY 4.0](paper/LICENSE.md), © 2026 Ryan Zimmerman. Share or adapt it with credit.
